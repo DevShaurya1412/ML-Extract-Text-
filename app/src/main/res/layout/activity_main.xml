@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/blackishblue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="-90dp">
+
+        <ImageView
+            android:id="@+id/buttoncamera"
+            android:layout_width="27dp"
+            android:layout_height="29dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.333"
+            app:srcCompat="@android:drawable/ic_menu_camera" />
+
+        <ImageView
+            android:id="@+id/buttonerase"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="52dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttoncamera"
+            app:layout_constraintHorizontal_bias="0.087"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.29"
+            app:srcCompat="@android:drawable/ic_menu_edit" />
+
+        <ImageView
+            android:id="@+id/buttoncopy"
+            android:layout_width="18dp"
+            android:layout_height="21dp"
+            android:layout_marginEnd="56dp"
+            app:layout_constraintBottom_toBottomOf="@+id/Copy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.932"
+            app:layout_constraintStart_toEndOf="@+id/buttoncamera"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.38"
+            app:srcCompat="?attr/actionModeCopyDrawable" />
+
+        <TextView
+            android:id="@+id/Erase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Erase"
+            android:textColor="#FBFBFB"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Copy"
+            app:layout_constraintHorizontal_bias="0.21"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.75" />
+
+        <TextView
+            android:id="@+id/Copy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Copy"
+            android:textColor="#FFFEFE"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.856"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.734" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="409dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <EditText
+            android:id="@+id/resultTV"
+            android:layout_width="291dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="text"
+            android:text="@string/extracted_text_will_be_shown_here" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
